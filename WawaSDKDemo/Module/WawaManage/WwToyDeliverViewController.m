@@ -52,7 +52,6 @@ typedef NS_ENUM(NSInteger, ToyDeliverPopType) {
 
 @interface WwToyDeliverViewController() <UITableViewDelegate, UITableViewDataSource, ToyDeliverFooterDelegate, WwDataModelDelegate>
 @property (nonatomic, strong) WwToyDeliverDataModel *dataModel;
-@property (nonatomic, strong) UITableView *tableView;
 @end
 
 @implementation WwToyDeliverViewController
@@ -118,7 +117,6 @@ typedef NS_ENUM(NSInteger, ToyDeliverPopType) {
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     
     if (object == _dataModel && [keyPath isEqualToString:kWwDataModelFetchResult]) {
         NSString *title;
@@ -194,8 +192,8 @@ typedef NS_ENUM(NSInteger, ToyDeliverPopType) {
     if (realIndex < model.records.count) {
         item = model.records[realIndex];
     }
-    
-    [WwToyCheckView showToyCheckViewWithWawa:item];
+    // TODO
+//    [WwToyCheckView showToyCheckViewWithWawa:item];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {

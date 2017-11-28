@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13529"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WwPopupsView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1On-1A-aiv">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpW-J1-bA9">
+                    <rect key="frame" x="40" y="182.5" width="295" height="302"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="302" id="hi7-b2-xMd"/>
+                        <constraint firstAttribute="width" constant="295" id="l1C-OU-Zij"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1On-1A-aiv" secondAttribute="bottom" id="01X-jj-twX"/>
+                <constraint firstItem="1On-1A-aiv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9c7-cx-qK8"/>
+                <constraint firstItem="1On-1A-aiv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RW8-O4-Hry"/>
+                <constraint firstItem="hpW-J1-bA9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Yu5-4i-8pF"/>
+                <constraint firstItem="hpW-J1-bA9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cHJ-7k-udD"/>
+                <constraint firstAttribute="trailing" secondItem="1On-1A-aiv" secondAttribute="trailing" id="mia-Ig-EbI"/>
+            </constraints>
+            <connections>
+                <outlet property="contentView" destination="hpW-J1-bA9" id="GHZ-JF-wd6"/>
+                <outlet property="contentViewConstraintHeight" destination="hi7-b2-xMd" id="c9l-pn-gNb"/>
+                <outlet property="contentViewConstraintWith" destination="l1C-OU-Zij" id="rS9-tc-Fwx"/>
+                <outlet property="shadeView" destination="1On-1A-aiv" id="oRK-p8-6hR"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

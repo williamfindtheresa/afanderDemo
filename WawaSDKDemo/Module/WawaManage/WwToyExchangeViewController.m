@@ -13,7 +13,7 @@
 #import "WwToyCheckView.h"
 
 #import "WwDataModel.h"
-#import <WawaSDK/WawaSDK.h>
+
 #import "WawaKitConstants.h"
 #import "MJRefresh.h"
 
@@ -118,7 +118,6 @@
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     if (object == self.dataModel && [keyPath isEqualToString:kWwDataModelFetchResult]) {
         NSString *title;
         if (self.dataModel.count) {
@@ -192,8 +191,8 @@
     if (realIndex < model.records.count) {
         item = model.records[realIndex];
     }
-    
-    [WwToyCheckView showToyCheckViewWithWawa:item];
+    // TODO
+//    [WwToyCheckView showToyCheckViewWithWawa:item];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {

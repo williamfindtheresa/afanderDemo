@@ -5,7 +5,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <WawaSDK/WawaSDK.h>
+
 
 static NSString * kWwToyDeliverHeader = @"WwToyDeliverHeader";
 static NSInteger HeightOfToyDeliverHeader = 32;

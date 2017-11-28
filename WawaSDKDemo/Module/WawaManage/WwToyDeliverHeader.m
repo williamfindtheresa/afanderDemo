@@ -68,7 +68,7 @@ static NSString *HeaderExchangedIcon = @"toy_exchange_icon";
         case DeliverHeader_Exchanged:
             iconName = HeaderExchangedIcon;
             stateText = @"已兑换";
-            _color = RGBCOLOR(245, 186, 26);
+            _color = kAppLabelColor;
             array = @[(id)RGBCOLORV(0xfff6d3).CGColor,
                       (id)RGBCOLORV(0xffffff).CGColor];
             break;

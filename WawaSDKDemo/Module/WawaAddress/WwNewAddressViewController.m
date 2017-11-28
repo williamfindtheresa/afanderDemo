@@ -35,6 +35,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.navigationController.navigationBarHidden = NO;
+    self.navigationController.navigationBar.translucent = NO;
+    
     [self customUI];
     [self updateAddressInfo];
     self.rightClicked = NO;
@@ -73,9 +76,7 @@
 }
 - (void)customUI {
     if (![WwLocalPcasCodeManager shareManager].pcasMarr.count) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-            [[WwLocalPcasCodeManager shareManager] recodeDataFromLocalJson];
-        });
+        [[WwLocalPcasCodeManager shareManager] recodeDataFromLocalJson];
     }
     // 修改placeholder默认字体颜色
     [_nameTextField setValue:RGBCOLORV(0xaeaeae) forKeyPath:@"_placeholderLabel.textColor"];
@@ -210,53 +211,80 @@
 
     if (self.defaultUserAddress) {
         // 修改
-//        [ZXHttpTask POST:kUserAddressEdit parameters:mDic taskResponse:^(DVLHttpResponse *response) {
-//            @strongify(self);
-//            self.rightClicked = NO;
-//            sender.enabled = YES;
-//            if (!response.code) {
-//                NSLog(@"地址保存成功");
-//                if (self.navigationController.presentingViewController) {
-//                    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
-//                } else {
-//                    [self.navigationController popViewControllerAnimated:YES];
-//                }
-//                [kZXUserModel requestAddressList];
-//            }
-//        }];
+        [[WawaSDK WawaSDKInstance].userInfoMgr updateUserAddress:^(WwAddressModel *upAddress) {
+            @strongify(self);
+            upAddress.province = realString(self.provinceM.name);
+            upAddress.city = realString(self.cityM.name);
+            upAddress.district = realString(self.areaM.name);
+            upAddress.address = realString(self.textView0.text);
+            upAddress.name = realString(self.nameTextField.text);
+            upAddress.phone = realString(self.phoneTextField.text);
+            upAddress.isDefault = self.switchM.on;
+            upAddress.aID = self.userAddressM.aID;
+            
+        } withCompleteHandler:^(int code, NSString *message) {
+            @strongify(self);
+            self.rightClicked = NO;
+            sender.enabled = YES;
+            if (code == WwErrorCodeSuccess) {
+                if (self.navigationController.presentingViewController) {
+                    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+                } else {
+                    [self.navigationController popViewControllerAnimated:YES];
+                }
+                
+            }
+            else {
+            }
+        }];
     } else {
         // 新建
-//        [ZXHttpTask POST:kUserAddressAdd parameters:mDic taskResponse:^(DVLHttpResponse *response) {
-//            @strongify(self);
-//            self.rightClicked = NO;
-//            sender.enabled = YES;
-//            if (!response.code) {
-//                NSLog(@"地址保存成功");
-//                if (self.navigationController.presentingViewController) {
-//                    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
-//                } else {
-//                    [self.navigationController popViewControllerAnimated:YES];
-//                }
-//                [kZXUserModel requestAddressList];
-//            } else {
-//                [ZYTipsView showInfoWithStatus:response.message];
-//            }
-//        }];
+        [[WawaSDK WawaSDKInstance].userInfoMgr addUserAddress:^(WwAddressModel *address) {
+            @strongify(self);
+            address.province = realString(self.provinceM.name);
+            address.city = realString(self.cityM.name);
+            address.district = realString(self.areaM.name);
+            address.address = realString(self.textView0.text);
+            address.name = realString(self.nameTextField.text);
+            address.phone = realString(self.phoneTextField.text);
+            address.isDefault = @(self.switchM.on);
+            
+        } withCompleteHandler:^(int code, NSString *message) {
+            @strongify(self);
+            self.rightClicked = NO;
+            sender.enabled = YES;
+            if (code == WwErrorCodeSuccess) {
+                NSLog(@"地址保存成功");
+                if (self.navigationController.presentingViewController) {
+                    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+                }
+                else {
+                    [self.navigationController popViewControllerAnimated:YES];
+                }
+            }
+            else {
+                NSLog(@"%@", message);
+            }
+        }];
     }
 }
 
 - (IBAction)deleteAction:(id)sender {
-//    [ZXHttpTask POST:kUserAddressDelete parameters:@{@"id":@(self.defaultUserAddress.aID)} taskResponse:^(DVLHttpResponse *response) {
-//        if (!response.code) {
-//            [ZYTipsView showInfoWithStatus:@"删除成功"];
-//            [kZXUserModel requestAddressList];
-//            if (self.navigationController.presentingViewController) {
-//                [self.navigationController dismissViewControllerAnimated:YES completion:nil];
-//            } else {
-//                [self.navigationController popViewControllerAnimated:YES];
-//            }
-//        }
-//    }];
+    @weakify(self);
+    [[WawaSDK WawaSDKInstance].userInfoMgr deleteUserAddress:self.userAddressM.aID withCompleteHandler:^(int code, NSString *message) {
+        @strongify(self);
+        if (code == WwErrorCodeSuccess) {
+            NSLog(@"删除成功");
+            if (self.navigationController.presentingViewController) {
+                [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+            } else {
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+        }
+        else {
+            NSLog(@"%@", message);
+        }
+    }];
 }
 
 

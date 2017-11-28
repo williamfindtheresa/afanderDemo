@@ -9,7 +9,7 @@
 #import "WwToyManageViewController.h"
 #import "WwUserAddressDataModel.h"
 
-#import <WawaSDK/WawaSDK.h>
+
 #import <WawaSDK/WwDataDef.h>
 
 

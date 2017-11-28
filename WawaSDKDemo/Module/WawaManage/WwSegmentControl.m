@@ -78,7 +78,7 @@
             // 默认下划线高  2
             self.buttonDown = [[UIView alloc] initWithFrame:CGRectMake(i* self.widthFloat, self.bounds.size.height -2, self.widthFloat, 2)];
             
-            [self.buttonDown setBackgroundColor:RGBCOLOR(255, 201, 91)];
+            [self.buttonDown setBackgroundColor:kAppLabelColor];
             [self addSubview:self.buttonDown];
         }
         

@@ -4,7 +4,7 @@
 //
 
 #import "WwLatestLiveCell.h"
-#import <WawaSDK/WawaSDK.h>
+
 #import "UIImageView+WawaKit.h"
 #import "UIColor+WawaKit.h"
 #import "UILabel+WawaKit.h"

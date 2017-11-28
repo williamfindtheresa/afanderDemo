@@ -18,6 +18,8 @@
 #define kAppBaseColor  DVLColorGen(@"#ff4f6a")
 // APP内通用字体颜色
 #define kAppTextColor RGBCOLOR(0xed, 0xed, 0xed)
+// APP内通用控件颜色 蓝色
+#define kAppLabelColor RGBCOLOR(54, 127, 255)
 // 导航栏渐变
 #define kAppNavGradientColors @[(id)RGBCOLORV(0xff5a5a).CGColor, (id)RGBCOLORV(0xef4266).CGColor]
 // APP内其他地方渐变

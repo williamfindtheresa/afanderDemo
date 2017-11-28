@@ -9,7 +9,7 @@
 #import "WwGameRecordViewController.h"
 #import "WwToyManageViewController.h"
 #import "WwAddressViewController.h"
-#import <WawaSDK/WawaSDK.h>
+
 
 @interface WwUserCenterViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;

@@ -3,7 +3,7 @@
 //  WawaSDKDemo
 //
 
-#import <WawaSDK/WawaSDK.h>
+
 #import "WwUserAddressDataModel.h"
 
 @implementation WwUserAddressDataModel

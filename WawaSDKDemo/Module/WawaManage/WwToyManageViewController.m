@@ -127,12 +127,12 @@
     rect.origin.x = rect.size.width;
     [self.deliverVC.view setFrame:rect];
     
-//    self.exchangeVC = [[WwToyExchangeViewController alloc] initWithNibName:nil bundle:nil];
-//    [self addChildViewController:self.exchangeVC];
-//    [self.scrollBaseV addSubview:self.exchangeVC.view];
-//    
-//    rect.origin.x = rect.size.width*2;
-//    [self.exchangeVC.view setFrame:rect];
+    self.exchangeVC = [[WwToyExchangeViewController alloc] initWithNibName:nil bundle:nil];
+    [self addChildViewController:self.exchangeVC];
+    [self.scrollBaseV addSubview:self.exchangeVC.view];
+    
+    rect.origin.x = rect.size.width*2;
+    [self.exchangeVC.view setFrame:rect];
     
     [self.segmentControl selectTheSegment:0];
     
@@ -290,7 +290,7 @@
     NSMutableArray *titleArray = [NSMutableArray new];
     [titleArray addObject:@"寄存中"];
     [titleArray addObject:@"已发货"];
-//    [titleArray addObject:@"已兑换"];
+    [titleArray addObject:@"已兑换"];
     return titleArray;
 }
 
@@ -322,14 +322,14 @@
 //    [ZXHttpTask POST:ZYUserWawaExchange parameters:para taskResponse:^(DVLHttpResponse *response) {
 //        @strongify(self);
 //        if (!response.code) {
-//            [ZYTipsView showSuccessWithStatus:@"兑换成功"];
+//            @"兑换成功";
 //            [kZXUserModel fetchUserRichInfo];
 //            [self.depositVC refreshList];
 //            [self.exchangeVC refreshList];
-//            [[ZYShareAudioPlayer shareAudioPlayer] playResultAudioWithFile:@"exchange_success" ofType:@"mp3"];
+//            [[WwShareAudioPlayer shareAudioPlayer] playResultAudioWithFile:@"exchange_success" ofType:@"mp3"];
 //        }
 //        else {
-//            [ZYTipsView showSuccessWithStatus:@"兑换失败"];
+//           @"兑换失败";
 //        }
 //    }];
 }

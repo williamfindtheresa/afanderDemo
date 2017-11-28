@@ -6,7 +6,7 @@
 #import "WwToyDetailViewController.h"
 #import "WwToyDetailCell.h"
 #import "WwToyDetailHeaderView.h"
-#import <WawaSDK/WawaSDK.h>
+
 #import "WwDataModel.h"
 #import <WawaSDK/WwDataDef.h>
 

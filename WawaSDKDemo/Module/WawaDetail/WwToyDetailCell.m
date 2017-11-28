@@ -18,7 +18,7 @@
 }
 
 - (void)reloadCellWithImage:(NSString *)imgName {
-    [self.contentImageView ww_setImageWithUrl:imgName];
+    [self.contentImageView sd_setImageWithURL:imgName];
 }
 
 @end

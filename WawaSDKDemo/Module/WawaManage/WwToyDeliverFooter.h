@@ -6,7 +6,7 @@
 
 
 #import <UIKit/UIKit.h>
-#import <WawaSDK/WawaSDK.h>
+
 
 static NSString * kWwToyDeliverFooter = @"WwToyDeliverFooter";
 

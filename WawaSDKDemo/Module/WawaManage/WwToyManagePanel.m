@@ -195,7 +195,7 @@
 //        [_selectAll setTitleEdgeInsets:UIEdgeInsetsMake(20, 19, 20, 0)];
         [_selectAll.titleLabel setTextAlignment:NSTextAlignmentLeft];
         [_selectAll setImage:[UIImage imageNamed:@"toy_deposit_unselect"] forState:UIControlStateNormal];
-        [_selectAll setImage:[UIImage imageNamed:@"toy_deposit_select"] forState:UIControlStateSelected];
+        [_selectAll setImage:[UIImage imageNamed:@"toy_checking_select"] forState:UIControlStateSelected];
         [_selectAll addTarget:self action:@selector(onPanelButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [_selectAll setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_selectAll addSubview:self.selectLabel];
@@ -220,9 +220,9 @@
         _createOrderBtn.backgroundColor = RGBCOLORV(0xffffff);
         _createOrderBtn.layer.cornerRadius = 15.5;
         _createOrderBtn.layer.borderWidth = 0.5;
-        _createOrderBtn.layer.borderColor = RGBCOLORV(0x444444).CGColor;
+        _createOrderBtn.layer.borderColor = [UIColor blackColor].CGColor;
         _createOrderBtn.titleLabel.font = [UIFont systemFontOfSize:15];
-        [_createOrderBtn setTitleColor:RGBCOLORV(0x444444) forState:UIControlStateNormal];
+        [_createOrderBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_createOrderBtn setTitle:@"申请发货" forState:UIControlStateNormal];
         [_createOrderBtn addTarget:self action:@selector(onPanelButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -233,10 +233,10 @@
     if (!_exchangeBtn) {
         _exchangeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _exchangeBtn.layer.cornerRadius = 15.5;
-        _exchangeBtn.layer.backgroundColor = RGBCOLORV(0xffda44).CGColor;
+        _exchangeBtn.layer.backgroundColor = kAppLabelColor.CGColor;
         
         _exchangeBtn.titleLabel.font = [UIFont systemFontOfSize:15];
-        [_exchangeBtn setTitleColor:RGBCOLORV(0x444444) forState:UIControlStateNormal];
+        [_exchangeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_exchangeBtn setTitle:@"兑换金币" forState:UIControlStateNormal];
         [_exchangeBtn addTarget:self action:@selector(onPanelButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -249,7 +249,7 @@
         _exchangeLabel.font = [UIFont systemFontOfSize:15];
         _exchangeLabel.text = @"兑换金币";
         [_exchangeLabel setTextAlignment:NSTextAlignmentCenter];
-        [_exchangeLabel setTextColor:RGBCOLORV(0x444444)];
+        [_exchangeLabel setTextColor:[UIColor whiteColor]];
     }
     return _exchangeLabel;
 }

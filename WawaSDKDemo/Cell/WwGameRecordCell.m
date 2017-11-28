@@ -8,7 +8,7 @@
 #import "UIImageView+WawaKit.h"
 #import "UILabel+WawaKit.h"
 #import "WawaKitConstants.h"
-#import <WawaSDK/WawaSDK.h>
+
 
 static NSString *BackButtonString = @"back_button";
 static NSString *Bottom_UnSelectButtonString = @"cart_unSelect_btn";
@@ -218,7 +218,7 @@ static NSString *CartEmptyString = @"cart_default_bg";
         _image = [[UIImageView alloc] init];
         _image.contentMode = UIViewContentModeScaleAspectFill;
         _image.clipsToBounds = YES;
-        _image.layer.borderColor = RGBCOLOR(255, 218, 68).CGColor;
+        _image.layer.borderColor = kAppLabelColor.CGColor;
         _image.layer.borderWidth = 0.5;
         _image.layer.cornerRadius = 2;
     }

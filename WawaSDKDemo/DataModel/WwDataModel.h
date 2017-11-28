@@ -4,7 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <WawaSDK/WawaSDK.h>
+
 
 OBJC_EXPORT NSString *const kWwDataModelFetchResult;
 

@@ -37,10 +37,9 @@
     
     UIButton *addNewBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     addNewBtn.frame = CGRectMake((ScreenWidth-250)/2, ScreenHeight-50, 250, 40);
-    addNewBtn.backgroundColor = RGBCOLORV(0xffda44);
-    addNewBtn.layer.backgroundColor = RGBCOLORV(0xffda44).CGColor;
+    addNewBtn.layer.backgroundColor = kAppLabelColor.CGColor;
     addNewBtn.layer.cornerRadius = 19.5f;
-    [addNewBtn setTintColor:RGBCOLORV(0x4c4c4c)];
+    [addNewBtn setTintColor:[UIColor whiteColor]];
     [addNewBtn setTitle:@"添加新地址" forState:UIControlStateNormal];
     [addNewBtn addTarget:self action:@selector(newBtnAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:addNewBtn];
@@ -63,6 +62,8 @@
         UITabBarController *tabVC = self.navigationController.tabBarController;
         tabVC.tabBar.hidden = YES;
     }
+    
+    [self requestAddressList];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -83,7 +84,6 @@
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     if (object == self.dataModel && [keyPath isEqualToString:kWwDataModelFetchResult]) {
         [self.tableView reloadData];
     }
@@ -127,18 +127,19 @@
     if (toType == NO) {
         return; //默认不可以取消默认地址
     }
-//    [ZXHttpTask POST:kUserSetDefaultAddress parameters:@{@"id":@(model.aID),@"isDefault":@(toType)} taskResponse:^(DVLHttpResponse *response) {
-//        if (!response.code) {
-//            [kZXUserModel.addressArr  enumerateObjectsUsingBlock:^(ZYUserAddressModel *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//                obj.isDefault = NO;
-//            }];
-//            model.isDefault = toType;
-//            [self.tableV reloadData];
-//        } else {
-//            [ZYTipsView showInfoWithStatus:response.message];
-//            [self.tableV reloadData];
-//        }
-//    }];
+    [[WawaSDK WawaSDKInstance].userInfoMgr updateAddress:model.aID toDefault:toType complete:^(int code, NSString *message) {
+        if (code == WwErrorCodeSuccess) {
+            
+            [self.dataModel.list enumerateObjectsUsingBlock:^(WwAddressModel *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                obj.isDefault = NO;
+            }];
+            model.isDefault = toType;
+            [self.tableView reloadData];
+        }
+        else {
+            [self.tableView reloadData];
+        }
+    }];
 }
 
 - (void)editBtnDidClicked:(WwAddressModel *)model {

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WwHalfExchangeViewController">
+            <connections>
+                <outlet property="bottomV" destination="aam-ek-wbc" id="eJD-8l-pKh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PbB-8Z-reZ" userLabel="topBase">
+                    <rect key="frame" x="0.0" y="200" width="375" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="兑换金币" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7T6-1d-p4I" userLabel="titleLab">
+                            <rect key="frame" x="130" y="21.5" width="115" height="21"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="B8d-1i-9mj"/>
+                                <constraint firstAttribute="width" constant="115" id="Eg9-Ij-GJ1"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvy-VH-F7f">
+                            <rect key="frame" x="311" y="10" width="44" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="1ky-j6-UcU"/>
+                                <constraint firstAttribute="height" constant="44" id="cb6-fB-FYg"/>
+                            </constraints>
+                            <state key="normal" image="live_close"/>
+                            <connections>
+                                <action selector="closeButton:" destination="-1" eventType="touchUpInside" id="DCh-Ev-QG9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.21176470588235294" green="0.49803921568627452" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="pvy-VH-F7f" secondAttribute="trailing" constant="20" id="EYT-zh-955"/>
+                        <constraint firstItem="7T6-1d-p4I" firstAttribute="centerX" secondItem="PbB-8Z-reZ" secondAttribute="centerX" id="KYH-zs-gfw"/>
+                        <constraint firstItem="7T6-1d-p4I" firstAttribute="centerY" secondItem="PbB-8Z-reZ" secondAttribute="centerY" id="MxQ-cz-cQf"/>
+                        <constraint firstItem="pvy-VH-F7f" firstAttribute="centerY" secondItem="PbB-8Z-reZ" secondAttribute="centerY" id="UMx-L4-Qg8"/>
+                        <constraint firstAttribute="height" constant="64" id="jgU-5K-T27"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aam-ek-wbc">
+                    <rect key="frame" x="0.0" y="264" width="375" height="403"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="aam-ek-wbc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3f6-HM-869"/>
+                <constraint firstItem="aam-ek-wbc" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="MMR-74-JOS"/>
+                <constraint firstAttribute="bottom" secondItem="aam-ek-wbc" secondAttribute="bottom" id="N8e-V4-HoV"/>
+                <constraint firstItem="PbB-8Z-reZ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="NCo-Dt-iKZ"/>
+                <constraint firstItem="PbB-8Z-reZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="200" id="WPi-v9-dtV"/>
+                <constraint firstItem="aam-ek-wbc" firstAttribute="top" secondItem="PbB-8Z-reZ" secondAttribute="bottom" id="acG-00-94m"/>
+                <constraint firstItem="PbB-8Z-reZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sJP-uY-rJf"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="70.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="live_close" width="24" height="24"/>
+    </resources>
+</document>

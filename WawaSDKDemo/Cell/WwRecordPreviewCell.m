@@ -144,7 +144,7 @@
         _videoPreview.userInteractionEnabled = YES;
         _videoPreview.contentMode = UIViewContentModeScaleAspectFill;
         _videoPreview.clipsToBounds = YES;
-        _videoPreview.layer.borderColor = RGBCOLOR(255, 218, 68).CGColor;
+        _videoPreview.layer.borderColor = kAppLabelColor.CGColor;
         _videoPreview.layer.borderWidth = 0.5;
         _videoPreview.layer.cornerRadius = 2;
     }
@@ -396,7 +396,7 @@
         _image = [[UIImageView alloc] init];
         _image.contentMode = UIViewContentModeScaleAspectFill;
         _image.clipsToBounds = YES;
-        _image.layer.borderColor = RGBCOLOR(255, 218, 68).CGColor;
+        _image.layer.borderColor = kAppLabelColor.CGColor;
         _image.layer.borderWidth = 0.5;
         _image.layer.cornerRadius = 2;
     }
@@ -476,10 +476,10 @@
 - (UIButton *)appealBtn {
     if (!_appealBtn) {
         _appealBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _appealBtn.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:218.0f/255.0f blue:68.0f/255.0f alpha:1.0f];
+        _appealBtn.backgroundColor = kAppLabelColor;
         _appealBtn.layer.cornerRadius = 13.5;
         _appealBtn.titleLabel.font = [UIFont systemFontOfSize:14];
-        [_appealBtn setTitleColor:RGBCOLORV(0x4c4c4c) forState:UIControlStateNormal];
+        [_appealBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_appealBtn setTitle:@"申诉" forState:UIControlStateNormal];
         [_appealBtn addTarget:self action:@selector(onPreviewButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     }

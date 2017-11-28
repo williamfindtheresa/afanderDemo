@@ -11,6 +11,7 @@
 @interface WwRecordDatailViewController ()<UITableViewDelegate, UITableViewDataSource, WwRecordPreviewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) WwGameRecordModel *recordModel;
+@property (nonatomic, strong) WwRecordDetailCell *detailCell;
 @end
 
 @implementation WwRecordDatailViewController
@@ -36,7 +37,7 @@
         UITabBarController *tabVC = self.navigationController.tabBarController;
         tabVC.tabBar.hidden = YES;
     }
-    [self.tableView reloadData];
+    [self gameAppealStateWithOrderID:_recordModel.orderId];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -60,6 +61,14 @@
 
     [self setTitle:@"游戏详情"];
     [self.view addSubview:_tableView];
+}
+
+- (void)gameAppealStateWithOrderID:(NSString *)orderID {
+    [[WawaSDK WawaSDKInstance].userInfoMgr gameAppealWithOrderID:orderID withCompleteHandler:^(int code, BOOL isComplain, NSString *message) {
+        if (!code) {
+            [self.tableView reloadData];
+        }
+    }];
 }
 
 #pragma mark - WwRecordPreviewDelegate
@@ -120,6 +129,7 @@
         WwRecordDetailCell *detailCell = [tableView dequeueReusableCellWithIdentifier:kWwRecordDetailCell];
         detailCell.delegate = self;
         cell = detailCell;
+        self.detailCell = detailCell;
     }
     else if (indexPath.section == 1) {
         WwRecordPreviewCell *previewCell = [tableView dequeueReusableCellWithIdentifier:kWwRecordPreviewCell];

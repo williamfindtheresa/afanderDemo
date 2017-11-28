@@ -4,7 +4,7 @@
 //
 
 #import "AppDelegate.h"
-#import <WawaSDK/WawaSDK.h>
+
 #import "WwHomeViewController.h"
 
 @interface AppDelegate ()

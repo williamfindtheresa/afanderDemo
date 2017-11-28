@@ -4,9 +4,9 @@
 //
 
 #import "WwHomeViewController.h"
-#import <WawaSDK/WawaSDK.h>
+
 #import "WwLatestLiveCell.h"
-#import "WwViewController.h"
+#import "WwLiveViewController.h"
 #import "RoomListDataModel.h"
 #import "MJRefresh.h"
 
@@ -136,9 +136,10 @@ WwDataModelDelegate>
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     // 进入游戏房间
     WwRoomModel * model = [_dataModel objectAtIndex:indexPath.row];
-    WwViewController *wwVC = [WwViewController new];
-    wwVC.model = model;
-    [self.navigationController pushViewController:wwVC animated:YES];
+    WwLiveViewController *wwVC = [WwLiveViewController new];
+    wwVC.room = model;
+    UINavigationController * navVC = [[UINavigationController alloc] initWithRootViewController:wwVC];
+    [self.navigationController presentViewController:navVC animated:YES completion:nil];
 }
 
 #pragma mark - UICollectionViewDataSource

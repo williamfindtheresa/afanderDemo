@@ -10,7 +10,7 @@
 #import "UILabel+WawaKit.h"
 
 static NSString *Bottom_UnSelectButtonString = @"toy_deposit_unselect";
-static NSString *Bottom_SelectButtonString = @"toy_deposit_select";
+static NSString *Bottom_SelectButtonString = @"toy_checking_select";
 
 @interface WwToyOrderCell ()
 {
@@ -214,7 +214,7 @@ static NSString *Bottom_SelectButtonString = @"toy_deposit_select";
         _image = [[UIImageView alloc] init];
         _image.contentMode = UIViewContentModeScaleAspectFill;
         _image.clipsToBounds = YES;
-        _image.layer.borderColor = RGBCOLOR(255, 218, 68).CGColor;
+        _image.layer.borderColor = kAppLabelColor.CGColor;
         _image.layer.borderWidth = 0.5;
         _image.layer.cornerRadius = 2;
     }

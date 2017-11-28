@@ -4,7 +4,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <WawaSDK/WawaSDK.h>
+
 
 static CGFloat HeightOfRecordPreviewCell = 412.f;
 static CGFloat HeightOfRecordDetailCell = 200.f;
