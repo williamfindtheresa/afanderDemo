@@ -38,7 +38,7 @@
     //下划线
     if (count > 1) {
         self.lineView = [[UIView alloc] init];
-        self.lineView.backgroundColor = RGBCOLORV(0xffe16f);
+        self.lineView.backgroundColor = kAppLabelColor;
         self.lineView.layer.cornerRadius = 1.0;
         [self addSubview:self.lineView];
     }

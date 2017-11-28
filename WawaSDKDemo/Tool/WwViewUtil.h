@@ -1,5 +1,5 @@
 //
-//  DVLViewUtil.h
+//  WwViewUtil.h
 //  friendbang
 //
 //  Created by lvbingru on 3/7/15.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface UIView(DVLUtil)
+@interface UIView(WwUtil)
 
 @property (nonatomic, assign) IBInspectable CGFloat cornerRadius;
 @property (nonatomic, assign) IBInspectable CGFloat borderWidth;
@@ -33,7 +33,7 @@
 @end;
 
 
-@interface DVLViewUtil : NSObject
+@interface WwViewUtil : NSObject
 
 + (CGFloat)screenWidth;
 + (CGFloat)screenHeight;
@@ -49,6 +49,6 @@
 + (void)makeCenterOfView:(UIView *)aView;
 @end
 
-@interface DVLTouchView : UIView
+@interface WwTouchView : UIView
 
 @end

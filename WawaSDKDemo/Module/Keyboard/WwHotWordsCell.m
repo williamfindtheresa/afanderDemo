@@ -51,10 +51,10 @@
     if (!_wordBtn) {
         _wordBtn = [[UILabel alloc] initWithFrame:self.bounds];
         _wordBtn.textAlignment = NSTextAlignmentCenter;
-        _wordBtn.textColor = DVLColorGen(@"#444444");
+        _wordBtn.textColor = WwColorGen(@"#444444");
         _wordBtn.font = font(17);
         
-        _wordBtn.layer.borderColor = DVLColorGen(@"#c1c1c1").CGColor;
+        _wordBtn.layer.borderColor = WwColorGen(@"#c1c1c1").CGColor;
         _wordBtn.layer.borderWidth = 1;
         _wordBtn.layer.cornerRadius = 3;
         

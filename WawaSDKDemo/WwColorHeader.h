@@ -15,7 +15,7 @@
 #define APP_COLOR_RED [UIColor colorWithRed:255/255.0 green:82/255.0 blue:83/255.0 alpha:1.0]
 
 // APP的基础色(红)
-#define kAppBaseColor  DVLColorGen(@"#ff4f6a")
+#define kAppBaseColor  WwColorGen(@"#ff4f6a")
 // APP内通用字体颜色
 #define kAppTextColor RGBCOLOR(0xed, 0xed, 0xed)
 // APP内通用控件颜色 蓝色
@@ -23,7 +23,7 @@
 // 导航栏渐变
 #define kAppNavGradientColors @[(id)RGBCOLORV(0xff5a5a).CGColor, (id)RGBCOLORV(0xef4266).CGColor]
 // APP内其他地方渐变
-#define kAppGradientColors @[(__bridge id)DVLColorGen(@"#ff6167").CGColor, (__bridge id)DVLColorGen(@"#ff4568").CGColor]
+#define kAppGradientColors @[(__bridge id)WwColorGen(@"#ff6167").CGColor, (__bridge id)WwColorGen(@"#ff4568").CGColor]
 
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 
@@ -35,8 +35,8 @@
 #define font(size) [UIFont systemFontOfSize:(size)]
 #define boldFont(size)  [UIFont boldSystemFontOfSize:(size)]
 
-#define DVLColorGen(aColorString) [UIColor colorFromString:aColorString]
-#define DVLColorGenAlpha(aColorString, aAlpha) [UIColor colorFromString:aColorString alpha:aAlpha]
+#define WwColorGen(aColorString) [UIColor colorFromString:aColorString]
+#define WwColorGenAlpha(aColorString, aAlpha) [UIColor colorFromString:aColorString alpha:aAlpha]
 
 //使用十六进制的颜色
 #define RGBCOLORV(rgbValue) [UIColor \

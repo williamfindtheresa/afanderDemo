@@ -23,7 +23,7 @@
     
     self.exchangeVC = [WwWawaExchangeViewController createWithInitData:nil];
     // TODO
-//    self.exchangeVC.DVL_InitData = self.DVL_InitData;
+//    self.exchangeVC.Ww_InitData = self.Ww_InitData;
     self.exchangeVC.view.frame = self.bottomV.bounds;
     [self.bottomV addSubview:self.exchangeVC.view];
     self.navigationController.view.backgroundColor = [UIColor clearColor];

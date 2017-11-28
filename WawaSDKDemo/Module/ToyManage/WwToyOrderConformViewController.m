@@ -49,7 +49,7 @@
     
     
     self.title = @"订单确认";
-//    [self DVL_adjustTableView:self.listTable];
+//    [self Ww_adjustTableView:self.listTable];
     self.listTable.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, CGFLOAT_MIN)];
     self.listTable.backgroundView = nil;
     self.listTable.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -75,7 +75,7 @@
 - (void)dealDataSource
 {
     //获取计算个数
-    NSArray<WwWawaDepositModel *> *arr = self.DVL_InitData; //按条数
+    NSArray<WwWawaDepositModel *> *arr = self.Ww_InitData; //按条数
     NSInteger count = arr.count;
     self.totalLabel.text = [NSString stringWithFormat:@"共计：%zi个娃娃",count];
     _totalNum = count;
@@ -138,7 +138,7 @@
 
 - (NSArray *)createOrderPara {
     NSMutableArray *arrayM = [@[] mutableCopy];
-    NSArray<WwWawaDepositModel *> *wawaRecordList = self.DVL_InitData; //按条数
+    NSArray<WwWawaDepositModel *> *wawaRecordList = self.Ww_InitData; //按条数
     for (int i=0; i<wawaRecordList.count; ++i) {
         WwWawaDepositModel *item = wawaRecordList[i];
         // Note:创建订单，使用娃娃记录ID，而不是娃娃ID
@@ -249,12 +249,12 @@
         view.backgroundColor = [UIColor whiteColor];
         UILabel *label = [[UILabel alloc] initWithFrame:(CGRect){16,10,100,20}];
         label.text = @"订单内容";
-        label.textColor = DVLColorGen(@"#444444");
+        label.textColor = WwColorGen(@"#444444");
         label.font = font(15);
         [view addSubview:label];
         
         UIView *sep = [[UIView alloc] initWithFrame:(CGRect){15,39,ScreenWidth - 30, 1}];
-        sep.backgroundColor = DVLColorGen(@"#eaeaea");
+        sep.backgroundColor = WwColorGen(@"#eaeaea");
         [view addSubview:sep];
         return view;
     }

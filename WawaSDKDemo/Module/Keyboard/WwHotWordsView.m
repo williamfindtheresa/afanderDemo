@@ -42,7 +42,7 @@
 #pragma mark - Layout
 - (void)customUI
 {
-    self.backgroundColor = DVLColorGen(@"#fafafa");
+    self.backgroundColor = WwColorGen(@"#fafafa");
     [self hotsCollectionView];
     [self.hotsCollectionView reloadData];
     
@@ -131,7 +131,7 @@
     if (!_hSpeView) {
         _hSpeView = [[UIView alloc] init];
         [self addSubview:_hSpeView];
-        _hSpeView.backgroundColor = DVLColorGen(@"#aeaeae");
+        _hSpeView.backgroundColor = WwColorGen(@"#aeaeae");
         [_hSpeView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.equalTo(self);
             make.height.equalTo(@(1));

@@ -40,8 +40,8 @@
     
     // Do any additional setup after loading the view from its nib.
     // TODO
-//    [self DVL_adjustTableView:self.tableView];
-    self.testHeightCell = DVLLoadNib(@"WwLogisticsCell");
+//    [self Ww_adjustTableView:self.tableView];
+    self.testHeightCell = WwLoadNib(@"WwLogisticsCell");
     
     [self.tableView registerNib:[UINib nibWithNibName:@"WwLogisticsCell" bundle:nil] forCellReuseIdentifier:@"WwLogisticsCell"];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -54,13 +54,13 @@
     self.tableView.backgroundView = nil;
     
     
-    self.headerView = DVLLoadNib(@"WwLogisticsHeaderView");
+    self.headerView = WwLoadNib(@"WwLogisticsHeaderView");
     
     CGFloat height = ScreenWidth * 132 / 375.0;
     self.headerView.frame = (CGRect){0,0,ScreenWidth,height};
     self.tableView.tableHeaderView = self.headerView;
     
-    WwWawaOrderModel *orderModel = self.DVL_InitData;
+    WwWawaOrderModel *orderModel = self.Ww_InitData;
     [self.headerView  fillContentWithOrderModel:orderModel];
     
 }

@@ -1,15 +1,15 @@
 //
-//  DVLViewUtil.m
+//  WwViewUtil.m
 //  friendbang
 //
 //  Created by lvbingru on 3/7/15.
 //  Copyright (c) 2015 forthblue. All rights reserved.
 //
 
-#import "DVLViewUtil.h"
+#import "WwViewUtil.h"
 
 
-@implementation UIView(DVL)
+@implementation UIView(Ww)
 
 - (CGFloat)cornerRadius
 {
@@ -130,7 +130,7 @@
 @end
 
 
-@implementation DVLViewUtil
+@implementation WwViewUtil
 
 + (CGFloat)screenWidth
 {
@@ -210,7 +210,7 @@
 @end
 
 
-@implementation DVLTouchView
+@implementation WwTouchView
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {

@@ -1,14 +1,14 @@
 //
-//  DVLColorUtil.m
-//  DVL
+//  WwColorUtil.m
+//  Ww
 //
 //  Created by lvbingru on 2/2/15.
 //  Copyright (c) 2015 forthblue. All rights reserved.
 //
 
-#import "DVLColorUtil.h"
+#import "WwColorUtil.h"
 
-@implementation UIColor(DVLUtil)
+@implementation UIColor(WwUtil)
 
 + (UIColor *)colorFromString:(NSString *)aColorString alpha:(CGFloat)aAlpha
 {

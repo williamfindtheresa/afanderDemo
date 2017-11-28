@@ -13,7 +13,7 @@
 
 - (void)fetchData
 {
-    WwWawaOrderModel *orderModel = self.ownVc.DVL_InitData;
+    WwWawaOrderModel *orderModel = self.ownVc.Ww_InitData;
     NSString *orderId = orderModel.orderId;
     if (realString(orderId).length) {
         NSLog(@"物流 - 没有订单id");

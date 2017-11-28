@@ -153,8 +153,8 @@
 		C5DD98D11FCDA90700AEE9BA /* IconImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD98C81FCDA90700AEE9BA /* IconImgView.m */; };
 		C5DD98D21FCDA90700AEE9BA /* GrounderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD98CA1FCDA90700AEE9BA /* GrounderView.m */; };
 		C5DD98D31FCDA90700AEE9BA /* WwGroundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD98CB1FCDA90700AEE9BA /* WwGroundManager.m */; };
-		C5DD98D71FCDAB0B00AEE9BA /* DVLColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD98D51FCDAB0A00AEE9BA /* DVLColorUtil.m */; };
-		C5DD98DA1FCDAB4800AEE9BA /* DVLViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD98D81FCDAB4800AEE9BA /* DVLViewUtil.m */; };
+		C5DD98D71FCDAB0B00AEE9BA /* WwColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD98D51FCDAB0A00AEE9BA /* WwColorUtil.m */; };
+		C5DD98DA1FCDAB4800AEE9BA /* WwViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD98D81FCDAB4800AEE9BA /* WwViewUtil.m */; };
 		C5DD98E01FCDADD600AEE9BA /* WwRoomVerticalScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD98DC1FCDADD500AEE9BA /* WwRoomVerticalScroll.m */; };
 		C5DD98E11FCDADD600AEE9BA /* WwRoomHorizontalScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD98DD1FCDADD500AEE9BA /* WwRoomHorizontalScroll.m */; };
 		C5DD99111FCDB1DD00AEE9BA /* ShareDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD99101FCDB1DD00AEE9BA /* ShareDataModel.m */; };
@@ -312,7 +312,6 @@
 		C5DD9B0D1FCDCC7100AEE9BA /* WwLogisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD9B041FCDCC7000AEE9BA /* WwLogisticsViewController.m */; };
 		C5DD9B0E1FCDCC7100AEE9BA /* WwLogisticsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5DD9B061FCDCC7000AEE9BA /* WwLogisticsHeaderView.xib */; };
 		C5DD9B111FCDCD8A00AEE9BA /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD9B101FCDCD8A00AEE9BA /* UIBarButtonItem+Extension.m */; };
-		C5DD9B141FCDDBFB00AEE9BA /* ZXSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD9B121FCDDBFA00AEE9BA /* ZXSegmentControl.m */; };
 		C5E313A61FB444070078B827 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E313A51FB444070078B827 /* libbz2.tbd */; };
 		C5E313A81FB444160078B827 /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E313A71FB444160078B827 /* libiconv.2.4.0.tbd */; };
 		C5E313AA1FB444210078B827 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E313A91FB444210078B827 /* libstdc++.6.0.9.tbd */; };
@@ -616,10 +615,10 @@
 		C5DD98C91FCDA90700AEE9BA /* GrounderSuperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrounderSuperView.h; sourceTree = "<group>"; };
 		C5DD98CA1FCDA90700AEE9BA /* GrounderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrounderView.m; sourceTree = "<group>"; };
 		C5DD98CB1FCDA90700AEE9BA /* WwGroundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WwGroundManager.m; sourceTree = "<group>"; };
-		C5DD98D51FCDAB0A00AEE9BA /* DVLColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVLColorUtil.m; sourceTree = "<group>"; };
-		C5DD98D61FCDAB0A00AEE9BA /* DVLColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVLColorUtil.h; sourceTree = "<group>"; };
-		C5DD98D81FCDAB4800AEE9BA /* DVLViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVLViewUtil.m; sourceTree = "<group>"; };
-		C5DD98D91FCDAB4800AEE9BA /* DVLViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVLViewUtil.h; sourceTree = "<group>"; };
+		C5DD98D51FCDAB0A00AEE9BA /* WwColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WwColorUtil.m; sourceTree = "<group>"; };
+		C5DD98D61FCDAB0A00AEE9BA /* WwColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WwColorUtil.h; sourceTree = "<group>"; };
+		C5DD98D81FCDAB4800AEE9BA /* WwViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WwViewUtil.m; sourceTree = "<group>"; };
+		C5DD98D91FCDAB4800AEE9BA /* WwViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WwViewUtil.h; sourceTree = "<group>"; };
 		C5DD98DC1FCDADD500AEE9BA /* WwRoomVerticalScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WwRoomVerticalScroll.m; sourceTree = "<group>"; };
 		C5DD98DD1FCDADD500AEE9BA /* WwRoomHorizontalScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WwRoomHorizontalScroll.m; sourceTree = "<group>"; };
 		C5DD98DE1FCDADD500AEE9BA /* WwRoomVerticalScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WwRoomVerticalScroll.h; sourceTree = "<group>"; };
@@ -919,8 +918,6 @@
 		C5DD9B061FCDCC7000AEE9BA /* WwLogisticsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WwLogisticsHeaderView.xib; sourceTree = "<group>"; };
 		C5DD9B0F1FCDCD8900AEE9BA /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		C5DD9B101FCDCD8A00AEE9BA /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
-		C5DD9B121FCDDBFA00AEE9BA /* ZXSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXSegmentControl.m; sourceTree = "<group>"; };
-		C5DD9B131FCDDBFB00AEE9BA /* ZXSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXSegmentControl.h; sourceTree = "<group>"; };
 		C5E313A51FB444070078B827 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		C5E313A71FB444160078B827 /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
 		C5E313A91FB444210078B827 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
@@ -1661,14 +1658,12 @@
 		C5DD98D41FCDAB0A00AEE9BA /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				C5DD9B131FCDDBFB00AEE9BA /* ZXSegmentControl.h */,
-				C5DD9B121FCDDBFA00AEE9BA /* ZXSegmentControl.m */,
 				C5DD996C1FCDB7CA00AEE9BA /* PopupsController */,
 				C5DD99121FCDB3C900AEE9BA /* SDPhotoBrowser */,
-				C5DD98D91FCDAB4800AEE9BA /* DVLViewUtil.h */,
-				C5DD98D81FCDAB4800AEE9BA /* DVLViewUtil.m */,
-				C5DD98D51FCDAB0A00AEE9BA /* DVLColorUtil.m */,
-				C5DD98D61FCDAB0A00AEE9BA /* DVLColorUtil.h */,
+				C5DD98D91FCDAB4800AEE9BA /* WwViewUtil.h */,
+				C5DD98D81FCDAB4800AEE9BA /* WwViewUtil.m */,
+				C5DD98D51FCDAB0A00AEE9BA /* WwColorUtil.m */,
+				C5DD98D61FCDAB0A00AEE9BA /* WwColorUtil.h */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -2455,9 +2450,9 @@
 				C5DD9A631FCDC33500AEE9BA /* YYImageCache.m in Sources */,
 				B6894CA01FB59AEC000AA566 /* WwToyDetailViewController.m in Sources */,
 				B6894C921FB59AEC000AA566 /* UIView+ST.m in Sources */,
-				C5DD98D71FCDAB0B00AEE9BA /* DVLColorUtil.m in Sources */,
+				C5DD98D71FCDAB0B00AEE9BA /* WwColorUtil.m in Sources */,
 				C5DD9AE51FCDC8B400AEE9BA /* WwRoomToyExchangeView.m in Sources */,
-				C5DD98DA1FCDAB4800AEE9BA /* DVLViewUtil.m in Sources */,
+				C5DD98DA1FCDAB4800AEE9BA /* WwViewUtil.m in Sources */,
 				B6894B7F1FB461A9000AA566 /* MJExtensionConst.m in Sources */,
 				B6894C961FB59AEC000AA566 /* WwAddressViewController.m in Sources */,
 				C5DD9A9B1FCDC33600AEE9BA /* NSTimer+YYAdd.m in Sources */,
@@ -2534,7 +2529,6 @@
 				C5DD994C1FCDB47C00AEE9BA /* UIView+WebCacheOperation.m in Sources */,
 				C5DD9A6F1FCDC33500AEE9BA /* YYWebImageOperation.m in Sources */,
 				C5DD98621FCD9AA700AEE9BA /* WwPingView.m in Sources */,
-				C5DD9B141FCDDBFB00AEE9BA /* ZXSegmentControl.m in Sources */,
 				B6F834EB1FB051E2005825F3 /* NSBundle+MJRefresh.m in Sources */,
 				C5DD99991FCDBFAB00AEE9BA /* WwWawaRecordListCell.m in Sources */,
 				C5DD9AF31FCDC8B400AEE9BA /* WwToyOrderConformViewController.m in Sources */,

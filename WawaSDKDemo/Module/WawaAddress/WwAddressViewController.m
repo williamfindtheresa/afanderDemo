@@ -143,7 +143,6 @@
 }
 
 - (void)editBtnDidClicked:(WwAddressModel *)model {
-//    [ZXRouter pushPage:ZXPageEditAddress withDate:model];
     WwNewAddressViewController *editVC = [[WwNewAddressViewController alloc] initWithNibName:nil bundle:nil];
     editVC.defaultUserAddress = model;
     [self.navigationController pushViewController:editVC animated:YES];
@@ -157,7 +156,7 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
-//        [ZXHttpTask POST:kUserAddressDelete parameters:@{@"id":@(self.deleteM.aID)} taskResponse:^(DVLHttpResponse *response) {
+//        [ZXHttpTask POST:kUserAddressDelete parameters:@{@"id":@(self.deleteM.aID)} taskResponse:^(WwHttpResponse *response) {
 //            if (!response.code) {
 //                [ZYTipsView showInfoWithStatus:@"删除成功"];
 //                [self requestAddressList];

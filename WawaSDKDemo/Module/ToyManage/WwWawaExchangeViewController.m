@@ -96,7 +96,7 @@
 
 - (void)fetchData {
     // TODO
-//    [ZXHttpTask GET:WwUserToyList parameters:@{@"type":@"deposit,express"} taskResponse:^(DVLHttpResponse *response) {
+//    [ZXHttpTask GET:WwUserToyList parameters:@{@"type":@"deposit,express"} taskResponse:^(WwHttpResponse *response) {
 //        if (!response.code) {
 //            NSMutableArray *sectionArray = [@[] mutableCopy];
 //
@@ -150,7 +150,7 @@
 //
 //            self.exchangeList = sectionArray;
 //        }
-//        [self setValue:@(response.code) forKey:kDVLKeyPathDataFetchResult];
+//        [self setValue:@(response.code) forKey:kWwKeyPathDataFetchResult];
 //    }];
 }
 
@@ -252,7 +252,7 @@
 
 #pragma mark - WwWawaExchangeViewController
 @interface WwWawaExchangeViewController () <ToyManagePanelDelegate>
-@property (nonatomic, strong) WwWawaExchangeDataModel *DVL_DataModel;
+@property (nonatomic, strong) WwWawaExchangeDataModel *Ww_DataModel;
 @property (nonatomic, strong) WwToyManagePanel *panel;
 @property (nonatomic, strong) WwPopupsView *exchangeSuccessView;
 @end
@@ -278,11 +278,11 @@
     return self;
 }
 
-- (Class)DVL_DataModelClass {
+- (Class)Ww_DataModelClass {
     return [WwWawaExchangeDataModel class];
 }
 
-- (Class)DVL_UIClass {
+- (Class)Ww_UIClass {
     return [WwToyCheckingCell class];
 }
 
@@ -356,7 +356,7 @@
 }
 
 - (BOOL)isCheckingDataEmpty {
-    return self.DVL_DataModel.exchangeList.count == 0;
+    return self.Ww_DataModel.exchangeList.count == 0;
 }
 
 #pragma mark - UITableViewDelegate
@@ -371,8 +371,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     CGFloat height = 0.f;
-    if (indexPath.section < self.DVL_DataModel.exchangeList.count) {
-        WwWawaExchangeItem *item = self.DVL_DataModel.exchangeList[indexPath.section];
+    if (indexPath.section < self.Ww_DataModel.exchangeList.count) {
+        WwWawaExchangeItem *item = self.Ww_DataModel.exchangeList[indexPath.section];
         if (item.depositList) {
             height = ToyCheckingCellRowHeight;
         }
@@ -384,8 +384,8 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if (section < self.DVL_DataModel.exchangeList.count) {
-        WwWawaExchangeItem *item = self.DVL_DataModel.exchangeList[section];
+    if (section < self.Ww_DataModel.exchangeList.count) {
+        WwWawaExchangeItem *item = self.Ww_DataModel.exchangeList[section];
         CGFloat height = 0.f;
         if (item.depositList.count) {
             height = 0.1f;
@@ -401,8 +401,8 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    if (section < self.DVL_DataModel.exchangeList.count) {
-        WwWawaExchangeItem *item = self.DVL_DataModel.exchangeList[section];
+    if (section < self.Ww_DataModel.exchangeList.count) {
+        WwWawaExchangeItem *item = self.Ww_DataModel.exchangeList[section];
         ToyDeliverHeaderStyle style = DeliverHeader_None;
         if (item.depositList.count) {
             return nil;
@@ -421,10 +421,10 @@
 #pragma mark - KVO
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
-    if (object == self.DVL_DataModel) {
+    if (object == self.Ww_DataModel) {
         // 初始化默认选择数目
-        [self setDefaultSelectCount:self.DVL_DataModel.defaultSelectCount withValue:self.DVL_DataModel.defaultSelectValue];
-        [self showManagePanel:self.DVL_DataModel.exchangeList.count];
+        [self setDefaultSelectCount:self.Ww_DataModel.defaultSelectCount withValue:self.Ww_DataModel.defaultSelectValue];
+        [self showManagePanel:self.Ww_DataModel.exchangeList.count];
         [self.tableView reloadData];
     }
 }
@@ -454,7 +454,7 @@
 }
 
 - (void)setAllSelect:(BOOL)select {
-    NSArray<WwWawaExchangeItem *> *array = self.DVL_DataModel.exchangeList;
+    NSArray<WwWawaExchangeItem *> *array = self.Ww_DataModel.exchangeList;
     NSInteger numOfSelected = 0;
     NSInteger value = 0;
     
@@ -513,7 +513,7 @@
         if (!code) {
             NSLog(@"兑换成功");
             [self exchangeSuccessView:[@(changeValue) stringValue]];
-            [self.DVL_DataModel fetchData];
+            [self.Ww_DataModel fetchData];
             [[WwShareAudioPlayer shareAudioPlayer] playResultAudioWithFile:@"exchange_success" ofType:@"mp3"];
         }
         else {
@@ -556,8 +556,8 @@
 - (NSArray <WwWawaExchangeItem *> *)selectToyList {
     NSMutableArray <WwWawaExchangeItem *>*array = [@[] mutableCopy];
     
-    for (int i=0; i<self.DVL_DataModel.exchangeList.count; ++i) {
-        WwWawaExchangeItem *exchangeItem = self.DVL_DataModel.exchangeList[i];
+    for (int i=0; i<self.Ww_DataModel.exchangeList.count; ++i) {
+        WwWawaExchangeItem *exchangeItem = self.Ww_DataModel.exchangeList[i];
         
         if (exchangeItem.depositList) {
             // 如果是寄存section，将其中选中的过滤出来
@@ -598,7 +598,7 @@
 #pragma mark - Setter
 - (void)setSelectCount:(NSInteger)count{
     _selectCount = count;
-    NSInteger total = self.DVL_DataModel.totalWawaCount;
+    NSInteger total = self.Ww_DataModel.totalWawaCount;
     [self.panel setCurrentSelectNumber:_selectCount withTotal:total];
 }
 

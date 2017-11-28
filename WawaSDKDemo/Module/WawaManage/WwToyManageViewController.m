@@ -254,7 +254,7 @@
     [self.segmentControl selectTheSegment:scrollView.contentOffset.x/self.view.bounds.size.width];
 }
 
-#pragma mark - ZXSegmentControlDelegate
+#pragma mark - WwSegmentControlDelegate
 -(void)segmentSelectionChange:(NSInteger)selection {
     if (self.segmentControl.selectSegment == 0) {
         [self showManagePanel:YES];
@@ -319,7 +319,7 @@
     NSDictionary *para = [self createExchangeParaWithList:toyList];
 //    [WwUserInfoManager UserInfoMgrInstance] request
 //    @weakify(self);
-//    [ZXHttpTask POST:ZYUserWawaExchange parameters:para taskResponse:^(DVLHttpResponse *response) {
+//    [ZXHttpTask POST:ZYUserWawaExchange parameters:para taskResponse:^(WwHttpResponse *response) {
 //        @strongify(self);
 //        if (!response.code) {
 //            @"兑换成功";

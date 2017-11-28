@@ -57,7 +57,7 @@ dispatch_async(dispatch_get_main_queue(), block);\
 #import "NSArray+AVTTool.h"
 #import "NSString+WawaKit.h"
 #import "UIView+ST.h"
-#import "DVLColorUtil.h"
+#import "WwColorUtil.h"
 #import "ShareDataModel.h"
 #import "UIImageView+WawaKit.h"
 
@@ -75,6 +75,6 @@ dispatch_async(dispatch_get_main_queue(), block);\
 
 #define MAXGrounderSuperViewCount 1500
 
-#define DVLLoadNib(aNibName) [[[NSBundle mainBundle] loadNibNamed:aNibName owner:nil options:nil] objectAtIndex:0]
+#define WwLoadNib(aNibName) [[[NSBundle mainBundle] loadNibNamed:aNibName owner:nil options:nil] objectAtIndex:0]
 
 #endif /* DemoPrefixHeader_pch */

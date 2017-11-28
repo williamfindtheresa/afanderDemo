@@ -661,7 +661,7 @@ typedef struct {
     // 房间ID
     NSInteger owid = [(WwRoomModel *)self.room ID];
     // TODO
-//    [ZXHttpTask POST:WwGameLogicRelease parameters:@{@"id":@(owid)} taskResponse:^(DVLHttpResponse *response) {
+//    [ZXHttpTask POST:WwGameLogicRelease parameters:@{@"id":@(owid)} taskResponse:^(WwHttpResponse *response) {
 //        if (block) {
 //            block(!response.code);
 //        }

@@ -42,7 +42,7 @@ static WwLogisticsViewController * _logistVC;
         [[UIApplication sharedApplication].keyWindow addSubview:_tmpView];
         _logistVC = [[WwLogisticsViewController alloc] init];
         // TODO
-//        [_logistVC setDVL_InitData:orderModel];
+//        [_logistVC setWw_InitData:orderModel];
         
         _logistVC.view.frame = (CGRect){0,ScreenHeight,ScreenWidth,ScreenHeight - 100};
         [_tmpView addSubview:_logistVC.view];
@@ -108,7 +108,7 @@ static WwLogisticsViewController * _logistVC;
         _closeBtn.frame = self.bounds;
         [self addSubview:_closeBtn];
         [_closeBtn addTarget:[self class] action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
-        _closeBtn.backgroundColor = DVLColorGenAlpha(@"#000000", 0.3);
+        _closeBtn.backgroundColor = WwColorGenAlpha(@"#000000", 0.3);
         
     }
     return self;

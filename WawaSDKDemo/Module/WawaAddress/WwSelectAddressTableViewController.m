@@ -102,8 +102,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     WwAddressModel * model = [self.dataModel objectAtIndex:indexPath.row];
-//    if ([self.DVL_InitData objectForKey:@"block"]) {
-//        void (^block) (ZYUserAddressModel *) = [self.DVL_InitData objectForKey:@"block"];
+//    if ([self.Ww_InitData objectForKey:@"block"]) {
+//        void (^block) (ZYUserAddressModel *) = [self.Ww_InitData objectForKey:@"block"];
 //        block(model);
 //    }
     [self.navigationController popViewControllerAnimated:YES];

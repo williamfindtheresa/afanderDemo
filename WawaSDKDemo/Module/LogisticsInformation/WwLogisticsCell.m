@@ -73,8 +73,8 @@ static CGFloat Log_Dis_Bottom = 20.0;
         self.topSpeLineView.hidden = YES;
         self.bottomSepLineView.hidden = NO;
         
-        dateColor = DVLColorGen(@"#1ed771");
-        desColor = DVLColorGen(@"#1ed771");
+        dateColor = WwColorGen(@"#1ed771");
+        desColor = WwColorGen(@"#1ed771");
         
     }
     else {
@@ -83,8 +83,8 @@ static CGFloat Log_Dis_Bottom = 20.0;
         self.topSpeLineView.hidden = NO;
         self.bottomSepLineView.hidden = NO;
         
-        dateColor = DVLColorGen(@"#878787");
-        desColor = DVLColorGen(@"#878787");
+        dateColor = WwColorGen(@"#878787");
+        desColor = WwColorGen(@"#878787");
     }
     
     
@@ -163,7 +163,7 @@ static CGFloat Log_Dis_Bottom = 20.0;
     if (!_speView) {
         _speView = [[UIView alloc] init];
         [self addSubview:_speView];
-        _speView.backgroundColor = DVLColorGen(@"#eaeaea");
+        _speView.backgroundColor = WwColorGen(@"#eaeaea");
         [_speView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.equalTo(self);
             make.height.equalTo(@(1));
@@ -179,7 +179,7 @@ static CGFloat Log_Dis_Bottom = 20.0;
     if (!_bigCycleView) {
         _bigCycleView = [[UIView  alloc] init];
         [self addSubview:_bigCycleView];
-        _bigCycleView.backgroundColor = DVLColorGen(@"#2ce880");
+        _bigCycleView.backgroundColor = WwColorGen(@"#2ce880");
         [_bigCycleView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).offset(25);
             make.top.equalTo(self).offset(Log_Dis_Top);
@@ -197,7 +197,7 @@ static CGFloat Log_Dis_Bottom = 20.0;
 {
     if (!_smallCycleView) {
         _smallCycleView = [[UIView alloc] init];
-        _smallCycleView.backgroundColor = DVLColorGen(@"#eaeaea");
+        _smallCycleView.backgroundColor = WwColorGen(@"#eaeaea");
         [self addSubview:_smallCycleView];
         
         [_smallCycleView  mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -216,7 +216,7 @@ static CGFloat Log_Dis_Bottom = 20.0;
 {
     if (!_topSpeLineView) {
         _topSpeLineView = [[UIView alloc] init];
-        _topSpeLineView.backgroundColor = DVLColorGen(@"#eaeaea");
+        _topSpeLineView.backgroundColor = WwColorGen(@"#eaeaea");
         [self  insertSubview:_topSpeLineView belowSubview:self.bigCycleView];
         
         [_topSpeLineView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -235,7 +235,7 @@ static CGFloat Log_Dis_Bottom = 20.0;
     if (!_bottomSepLineView) {
         
         _bottomSepLineView = [[UIView alloc] init];
-        _bottomSepLineView.backgroundColor = DVLColorGen(@"#eaeaea");
+        _bottomSepLineView.backgroundColor = WwColorGen(@"#eaeaea");
         [self  insertSubview:_bottomSepLineView belowSubview:self.bigCycleView];
         
         [_bottomSepLineView mas_makeConstraints:^(MASConstraintMaker *make) {

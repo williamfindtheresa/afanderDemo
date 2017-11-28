@@ -135,7 +135,7 @@
 
 - (void)customUI
 {
-    self.backgroundColor = DVLColorGen(@"#fafafa");
+    self.backgroundColor = WwColorGen(@"#fafafa");
     [self hotBtn];
     [self textField];
     [self sendBtn];
@@ -344,7 +344,7 @@
             make.height.equalTo(self);
         }];
         [_sendBtn setTitle:@"发送" forState:UIControlStateNormal];
-        [_sendBtn setTitleColor:DVLColorGen(@"#4c4c4c") forState:UIControlStateNormal];
+        [_sendBtn setTitleColor:WwColorGen(@"#4c4c4c") forState:UIControlStateNormal];
         [_sendBtn addTarget:self action:@selector(clickSend) forControlEvents:UIControlEventTouchUpInside];
     }
     return _sendBtn;
@@ -358,13 +358,13 @@
         _textField.backgroundColor = [UIColor clearColor];
         _textField.autoresizingMask = UIViewAutoresizingFlexibleHeight;
         NSMutableAttributedString * atrr = [[NSMutableAttributedString alloc] initWithString:@"来一发试试"];
-        [atrr addAttribute:NSForegroundColorAttributeName value:DVLColorGen(@"#AEAEAE") range:atrr.rangeOfAll];
+        [atrr addAttribute:NSForegroundColorAttributeName value:WwColorGen(@"#AEAEAE") range:atrr.rangeOfAll];
 //        _textField.placeholder = @"来一发试试";
         _textField.attributedPlaceholder = atrr;
         _textField.returnKeyType = UIReturnKeySend;
         _textField.delegate = self;
         _textField.font = [UIFont systemFontOfSize:17.0];
-        _textField.textColor = DVLColorGen(@"#4c4c4c");
+        _textField.textColor = WwColorGen(@"#4c4c4c");
         [self addSubview:_textField];
         @weakify(self);
         [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -384,7 +384,7 @@
     if (!_vSpeView) {
         _vSpeView = [[UIView alloc] init];
         [self addSubview:_vSpeView];
-        _vSpeView.backgroundColor = DVLColorGen(@"#aeaeae");
+        _vSpeView.backgroundColor = WwColorGen(@"#aeaeae");
         [_vSpeView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self).offset(-55);
             make.width.equalTo(@(1));
@@ -401,7 +401,7 @@
     if (!_hSpeView) {
         _hSpeView = [[UIView alloc] init];
         [self addSubview:_hSpeView];
-        _hSpeView.backgroundColor = DVLColorGen(@"#aeaeae");
+        _hSpeView.backgroundColor = WwColorGen(@"#aeaeae");
         [_hSpeView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.equalTo(self);
             make.height.equalTo(@(1));

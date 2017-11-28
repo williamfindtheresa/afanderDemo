@@ -9,7 +9,7 @@
 #import "WwLogisticsHeaderView.h"
 
 #import "WwLogisticsDataModel.h"
-#import "DVLViewUtil.h"
+#import "WwViewUtil.h"
 
 
 @interface WwLogisticsHeaderView ()
@@ -36,12 +36,12 @@
     self.picContainer.layer.cornerRadius = 3;
     self.picContainer.layer.masksToBounds = YES;
     
-    self.picContainer.layer.borderColor = DVLColorGen(@"#ffd236").CGColor;
+    self.picContainer.layer.borderColor = WwColorGen(@"#ffd236").CGColor;
     self.picContainer.layer.borderWidth = 0.5;
     
     [self.phoneLabel  addSingleTapGestureAtTarget:self action:@selector(callPhone:)];
     
-    self.backgroundColor = DVLColorGen(@"FFFFFF");
+    self.backgroundColor = WwColorGen(@"FFFFFF");
     
     [self  refreshInitData];
 }
@@ -115,11 +115,11 @@
     NSString *mr = realString(result);
     
     NSMutableAttributedString * mstr = [[NSMutableAttributedString  alloc] initWithString:mt];
-    [mstr addAttribute:NSForegroundColorAttributeName value:DVLColorGen(tcolor) range:mt.rangeOfAll];
+    [mstr addAttribute:NSForegroundColorAttributeName value:WwColorGen(tcolor) range:mt.rangeOfAll];
     
     
     NSMutableAttributedString *mrStr = [[NSMutableAttributedString  alloc] initWithString:mr];
-    [mrStr addAttribute:NSForegroundColorAttributeName value:DVLColorGen(resultColor) range:mr.rangeOfAll];
+    [mrStr addAttribute:NSForegroundColorAttributeName value:WwColorGen(resultColor) range:mr.rangeOfAll];
     
     [mstr appendAttributedString:mrStr];
     

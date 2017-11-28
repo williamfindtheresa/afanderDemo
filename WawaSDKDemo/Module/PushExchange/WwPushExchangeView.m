@@ -98,26 +98,6 @@ typedef NS_ENUM(NSUInteger, WwPushExchangeStatus)
         }
         return;
     }
-
-    
-//    if ([ZXRouter canAccessVideo]) {
-//        //对视屏
-//        self.pushType = (self.pushType ^ (1 << 0));
-//        
-//        NSDictionary *dic = @{@"id":@(self.roomData.ID),
-//                              @"liveFlag":@(self.pushType),
-//                              @"orderId":realString(self.orderId),
-//                              };
-//        
-//        [ZXHttpTask POST:WwGameLiveFlag parameters:dic taskResponse:^(DVLHttpResponse *response) {
-//            NSLog(@"pull - liveFlag  %@",response.data);
-//        }];
-//        [self freshPusherUIAfterClick];
-//        
-//        [UIView transitionWithView:self duration:1.0 options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil completion:nil];
-//    }
-//    
-//
 }
 
 #pragma mark - Helper
@@ -425,7 +405,7 @@ typedef NS_ENUM(NSUInteger, WwPushExchangeStatus)
 //    //只去拉流
 //    NSString *url = [WwCommonRoomStream stringByAppendingPathComponent:[@([roomData ID]) stringValue]];
 //    @weakify(self);
-//    [ZXHttpTask GET:url parameters:nil taskResponse:^(DVLHttpResponse *response) {
+//    [ZXHttpTask GET:url parameters:nil taskResponse:^(WwHttpResponse *response) {
 //        @strongify(self);
 //        NSLog(@"%@",response.data);
 //        if(response.code != 0) {

@@ -233,7 +233,7 @@ typedef NS_ENUM(NSInteger, ToyDeliverPopType) {
         if (model.status == 0) { // 准备中
             // Note:发货准备中使用orderIds
             NSDictionary *para = @{@"orderIds":[NSString stringWithFormat:@"%@", model.orderId]};
-//            [ZXHttpTask POST:ZYUserWawaExchange parameters:para taskResponse:^(DVLHttpResponse *response) {
+//            [ZXHttpTask POST:ZYUserWawaExchange parameters:para taskResponse:^(WwHttpResponse *response) {
 //                if (!response.code) {
 //                    [self.dataModel fetchData];
 //                    [[NSNotificationCenter defaultCenter] postNotificationName:NotiRefreshExchangeList object:nil];
@@ -243,7 +243,7 @@ typedef NS_ENUM(NSInteger, ToyDeliverPopType) {
         else if (model.status == 1) { // 运送中
             NSDictionary *para = @{@"orderId":[NSString stringWithFormat:@"%@", model.orderId]};
 //            @strongify(self);
-//            [ZXHttpTask POST:ZYUserWawaReceived parameters:para taskResponse:^(DVLHttpResponse *response) {
+//            [ZXHttpTask POST:ZYUserWawaReceived parameters:para taskResponse:^(WwHttpResponse *response) {
 //                if (!response.code) {
 //                    [self.dataModel fetchData];
 //                }

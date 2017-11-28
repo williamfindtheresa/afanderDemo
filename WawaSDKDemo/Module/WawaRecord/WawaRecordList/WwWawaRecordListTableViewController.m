@@ -7,7 +7,7 @@
 #import "WwWawaRecordListTableViewController.h"
 #import "WwWawaRecordListModel.h"
 #import "WwWawaRecordListCell.h"
-#import "DVLViewUtil.h"
+#import "WwViewUtil.h"
 
 
 @interface WwWawaRecordListTableViewController ()<UIScrollViewDelegate>

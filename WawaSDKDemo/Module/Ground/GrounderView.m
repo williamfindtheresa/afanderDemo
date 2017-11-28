@@ -7,8 +7,8 @@
 //
 #import "GrounderView.h"
 #import "IconImgView.h"
-#import "DVLViewUtil.h"
-#import "DVLColorUtil.h"
+#import "WwViewUtil.h"
+#import "WwColorUtil.h"
 
 #define BarrageDureation 6.0
 
@@ -151,11 +151,11 @@
     
     //昵称
     _topLabel.text = name;
-    _topLabel.frame = CGRectMake(35, 0, [DVLViewUtil widthOfLabel:_topLabel], 10);
+    _topLabel.frame = CGRectMake(35, 0, [WwViewUtil widthOfLabel:_topLabel], 10);
     
     //消息体
     _messageLabel.text = text;
-    _messageLabel.frame = CGRectMake(35, 12, [DVLViewUtil widthOfLabel:_messageLabel], 18);
+    _messageLabel.frame = CGRectMake(35, 12, [WwViewUtil widthOfLabel:_messageLabel], 18);
     _messageLabel.textColor = [UIColor whiteColor];
     
     viewWidth = _messageLabel.frame.size.width + 55;
@@ -200,9 +200,9 @@
     _messageLabel.text = body;
     _messageLabel.textColor = kAppLabelColor;
     _messageLabel.font = font(16);
-    _messageLabel.frame = CGRectMake(5, 6, [DVLViewUtil widthOfLabel:_messageLabel], 20);
+    _messageLabel.frame = CGRectMake(5, 6, [WwViewUtil widthOfLabel:_messageLabel], 20);
     
-    _messageLabel.shadowColor = DVLColorGenAlpha(@"#000000", 0.3);
+    _messageLabel.shadowColor = WwColorGenAlpha(@"#000000", 0.3);
     _messageLabel.shadowOffset = CGSizeMake(0.5, 0.5);
 
     

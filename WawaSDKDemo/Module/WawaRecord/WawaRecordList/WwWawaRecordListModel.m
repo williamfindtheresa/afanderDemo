@@ -24,7 +24,7 @@
 {
     // TODO
 //    NSString *url = [NSString stringWithFormat:@"%@/%zd/%zd", kWawaCommonRoomWawa, kZXUserModel.currentRoomID, page];
-//    [ZXHttpTask GET:url parameters:nil taskResponse:^(DVLHttpResponse *response) {
+//    [AVTHttpTask GET:url parameters:nil taskResponse:^(WwHttpResponse *response) {
 //        //首页推荐
 //        if (response.code != 0) {
 //            return;

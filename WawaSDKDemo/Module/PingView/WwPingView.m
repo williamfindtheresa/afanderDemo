@@ -60,13 +60,13 @@ static NSInteger kPingDurtion = 5;
     safe_async_main((^{
         BOOL pingStutasChanged = NO;
         if (ping <= 100) {
-            self.backgroundColor = DVLColorGen(@"#37e077");
+            self.backgroundColor = WwColorGen(@"#37e077");
             pingStutasChanged = self.ping > 100;
         } else if (ping <= 300) {
-            self.backgroundColor = DVLColorGen(@"#f3be29");
+            self.backgroundColor = WwColorGen(@"#f3be29");
             pingStutasChanged = self.ping > 300 || self.ping <= 100;
         } else {
-            self.backgroundColor = DVLColorGen(@"#ff5a45");
+            self.backgroundColor = WwColorGen(@"#ff5a45");
             pingStutasChanged = self.ping <= 300;
         }
         self.ping = ping;

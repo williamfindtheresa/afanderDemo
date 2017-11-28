@@ -277,7 +277,7 @@
 {
     if (!_innerShader) {
         _innerShader = [CALayer layer];
-        _innerShader.backgroundColor = DVLColorGenAlpha(@"#000000", 0.2).CGColor;
+        _innerShader.backgroundColor = WwColorGenAlpha(@"#000000", 0.2).CGColor;
         _innerShader.frame = (CGRect){0,0,40,40};
         _innerShader.cornerRadius = 40/2.0;
     }
@@ -337,7 +337,7 @@
 
 - (void)updateFillColorToRed
 {
-    self.topLayer.colors = @[(id)DVLColorGen(@"#ef313a").CGColor, (id)DVLColorGen(@"#fb6a43").CGColor];
+    self.topLayer.colors = @[(id)WwColorGen(@"#ef313a").CGColor, (id)WwColorGen(@"#fb6a43").CGColor];
 }
 
 
