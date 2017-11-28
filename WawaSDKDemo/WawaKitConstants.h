@@ -1,6 +1,6 @@
 //
 //  WawaKitConstants.h
-//  WawaSDKDemo
+//  F_Sky
 //
 
 #ifndef WawaKitConstants_h
