@@ -1,9 +1,5 @@
 //
 //  BREngine.m
-//  yuyou
-//
-//  Created by ganyanchao on 12/09/2017.
-//  Copyright © 2017 Zhang Xiu Inc. All rights reserved.
 //
 
 #import "BREngine.h"
@@ -20,7 +16,7 @@ static const int EleDataModel_key; /**< 元素 data*/
     //
     //    NSMutableArray<BRElementContainerView *> * _elementContainerReuseQueue;/**< 已经消失可以复用的 弹幕元素容器*/
     
-    NSMutableArray<id<BRElementInterface>> *_showingQueue; /**< 正在展示的 弹幕元素*/
+    NSMutableArray<id<BRElementInterface>> *_fskyQueue; /**< 正在展示的 弹幕元素*/
     
     NSMutableArray<id<BRRendDataInterface>> *_waitingQueue; /**< 等待中的弹幕数据model*/
     
@@ -64,7 +60,7 @@ static const int EleDataModel_key; /**< 元素 data*/
 #pragma mark - Life Cycle
 - (void)configInit
 {
-    _showingQueue = [@[] mutableCopy];
+    _fskyQueue = [@[] mutableCopy];
     _waitingQueue = [@[] mutableCopy];
     _lineHeight = [@[] mutableCopy];
     
@@ -74,7 +70,7 @@ static const int EleDataModel_key; /**< 元素 data*/
 #pragma mark - Public
 - (NSArray *)animatingElements
 {
-    return [_showingQueue copy];
+    return [_fskyQueue copy];
 }
 
 /**< 弹幕数据模型 统一调度。 按需，batch 派发，有缓存策略*/
@@ -106,7 +102,7 @@ static const int EleDataModel_key; /**< 元素 data*/
                        BR_updateLayout*/
 {
     
-    [_showingQueue enumerateObjectsUsingBlock:^(id<BRElementInterface>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [_fskyQueue enumerateObjectsUsingBlock:^(id<BRElementInterface>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
         if([obj respondsToSelector:@selector(BR_updateLayout)]) {
             [obj BR_updateLayout];
@@ -159,8 +155,8 @@ static const int EleDataModel_key; /**< 元素 data*/
     }
     
     [self  bindLine:line toElement:element];
-    // 将其添加到 showing 队列
-    [_showingQueue addObject:element];
+    // 将其添加到 FSky 队列
+    [_fskyQueue addObject:element];
     
     //立即将航道标记为不可用
     BOOL dis = NO;
@@ -182,13 +178,13 @@ static const int EleDataModel_key; /**< 元素 data*/
 
 }
 
-- (void)checkShowingElement //can overrite
+- (void)checkFSkyElement //can overrite
 {
     /**< 检查航道是否可用。
      我们认为，任何一个航道，只要有一个element，刚开始，都不可用
      刚开始定位为：elment 元素 frame.x > 1/2(canvas width)
      */
-    if (!(_showingQueue.count > 0 || _waitingQueue.count > 0)) {
+    if (!(_fskyQueue.count > 0 || _waitingQueue.count > 0)) {
         [self stopCheckTimer];
         return;
     }
@@ -199,7 +195,7 @@ static const int EleDataModel_key; /**< 元素 data*/
     NSMutableDictionary *markDic = [@{} mutableCopy];
     /*key number, value bool*/
     
-    [_showingQueue enumerateObjectsUsingBlock:^(id<BRElementInterface>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [_fskyQueue enumerateObjectsUsingBlock:^(id<BRElementInterface>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
         BRElementContainerView *cv = (BRElementContainerView *)obj.BR_element.superview;
         if (!cv) {
@@ -284,7 +280,7 @@ static const int EleDataModel_key; /**< 元素 data*/
         [cavas layoutIfNeeded];
         
     } completion:^(BOOL finished) {
-        [self removeShowingElement:element];
+        [self removeFSkyElement:element];
     }];
     
 }
@@ -440,12 +436,12 @@ static const int EleDataModel_key; /**< 元素 data*/
 }
 
 
-- (void)removeShowingElement:(id<BRElementInterface>)ele
+- (void)removeFSkyElement:(id<BRElementInterface>)ele
 {
     BRElementContainerView *eleContainerView = ele.BR_element.superview;
     [ele.BR_element removeFromSuperview];
     [eleContainerView removeFromSuperview];
-    [_showingQueue removeObject:ele];
+    [_fskyQueue removeObject:ele];
 }
 
 - (nonnull BRElementContainerView *)readReuseContainerView
@@ -466,7 +462,7 @@ static const int EleDataModel_key; /**< 元素 data*/
     NSTimeInterval val = self.checkDuration;
     _checkTimer = [NSTimer scheduledTimerWithTimeInterval:val block:^(NSTimer * _Nonnull timer) {
         @strongify(self);
-        [self checkShowingElement];
+        [self checkFSkyElement];
     } repeats:YES];
 }
 

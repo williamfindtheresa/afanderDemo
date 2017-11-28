@@ -1,9 +1,5 @@
 //
 //  GrounderView.m
-//  GrounderDemo
-//
-//  Created by 贾楠 on 16/3/8.
-//  Copyright © 2016年 贾楠. All rights reserved.
 //
 #import "GrounderView.h"
 #import "IconImgView.h"

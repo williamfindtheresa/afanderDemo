@@ -1,8 +1,5 @@
 //
 //  UIBarButtonItem+YFExtension.h
-//  QMPlayground
-//
-//  Copyright © 2016年 QMTV. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

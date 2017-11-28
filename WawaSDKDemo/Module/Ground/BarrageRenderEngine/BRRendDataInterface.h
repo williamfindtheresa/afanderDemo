@@ -1,14 +1,9 @@
 //
 //  BRRendDataInterface.h
-//  yuyou
-//
-//  Created by ganyanchao on 14/09/2017.
-//  Copyright © 2017 Zhang Xiu Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-/**< 动画类型。 一起写  http://www.shouyin.tv */
 typedef NS_ENUM(NSUInteger, BRRendAnimateType) {
     BRRendAnimateTypeRTL, //默认，从右到左 过场动画
     BRRendAnimateTypeCenterBreathe, //un implement 心跳动画

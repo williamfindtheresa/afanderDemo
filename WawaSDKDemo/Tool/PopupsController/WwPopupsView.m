@@ -1,9 +1,7 @@
 //
 //  WwPopupsView.m
-//  prizeClaw
+//  F_Sky
 //
-//  Created by yuyou on 2017/10/10.
-//  Copyright © 2017年 QuanMin.ShouYin. All rights reserved.
 //
 
 #import "WwPopupsView.h"

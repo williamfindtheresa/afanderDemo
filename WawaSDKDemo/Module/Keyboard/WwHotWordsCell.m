@@ -1,9 +1,5 @@
 //
 //  WwHotWordsCell.m
-//  prizeClaw
-//
-//  Created by ganyanchao on 06/10/2017.
-//  Copyright © 2017 QuanMin.ShouYin. All rights reserved.
 //
 
 #import "WwHotWordsCell.h"

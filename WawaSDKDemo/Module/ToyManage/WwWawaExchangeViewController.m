@@ -1,6 +1,6 @@
 //
 //  WwToyExchangeView.m
-//  prizeClaw
+//  F_Sky
 
 
 #import <Foundation/Foundation.h>

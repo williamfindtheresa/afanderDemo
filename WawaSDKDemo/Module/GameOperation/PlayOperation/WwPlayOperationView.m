@@ -1,9 +1,5 @@
 //
 //  WwPlayOperationView.m
-//  prizeClaw
-//
-//  Created by GrayLocus on 2017/10/2.
-//  Copyright © 2017年 QuanMin.ShouYin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

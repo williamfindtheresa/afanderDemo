@@ -1,9 +1,5 @@
 //
 //  WwViewUtil.h
-//  friendbang
-//
-//  Created by lvbingru on 3/7/15.
-//  Copyright (c) 2015 forthblue. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -1,9 +1,5 @@
 //
 //  BRCanvasInterface.h
-//  yuyou
-//
-//  Created by ganyanchao on 12/09/2017.
-//  Copyright © 2017 Zhang Xiu Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

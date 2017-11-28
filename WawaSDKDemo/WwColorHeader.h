@@ -1,6 +1,6 @@
 //
 //  WwColorHeader.h
-//  prizeClaw
+//  F_Sky
 //
 
 #ifndef WwColorHeader_h

@@ -1,6 +1,6 @@
 //
 //  WwWaWaRecordInfoViewController.m
-//  prizeClaw
+//  F_Sky
 //
 
 

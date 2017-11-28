@@ -1,9 +1,5 @@
 //
 //  WwLiveViewController.m
-//  prizeClaw
-//
-//  Created by 刘昊 on 2017/10/1.
-//  Copyright © 2017年 QuanMin.ShouYin. All rights reserved.
 //
 
 #import "WwLiveViewController.h"

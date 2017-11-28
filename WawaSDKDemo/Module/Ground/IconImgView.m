@@ -1,9 +1,5 @@
 //
 //  IconImgView.m
-//  关注动画
-//
-//  Created by liyang on 16/5/18.
-//  Copyright © 2016年 李洋. All rights reserved.
 //
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 #import "IconImgView.h"

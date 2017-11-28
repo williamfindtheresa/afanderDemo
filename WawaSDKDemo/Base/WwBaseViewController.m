@@ -1,9 +1,5 @@
 //
 //  WwBaseViewController.m
-//  WawaSDKDemo
-//
-//  Created by 刘昊 on 2017/11/29.
-//  Copyright © 2017年 GrayLocus. All rights reserved.
 //
 
 #import "WwBaseViewController.h"

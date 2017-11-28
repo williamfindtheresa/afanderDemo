@@ -1,9 +1,5 @@
 //
 //  UILabel+YFExtension.m
-//  QMPlayground
-//
-//  Created by 谢宇锋 on 16/3/30.
-//  Copyright © 2016年 QMTV. All rights reserved.
 //
 
 #import "UILabel+YFExtension.h"

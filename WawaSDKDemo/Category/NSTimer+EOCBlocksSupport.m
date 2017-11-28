@@ -1,9 +1,5 @@
 //
 //  NSTimer+EOCBlocksSupport.m
-//  yuyou
-//
-//  Created by LvBingru on 5/12/16.
-//  Copyright © 2016 李洋. All rights reserved.
 //
 
 #import "NSTimer+EOCBlocksSupport.h"

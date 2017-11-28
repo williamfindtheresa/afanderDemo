@@ -1,9 +1,5 @@
 //
 //  IconImgView.h
-//  关注动画
-//
-//  Created by liyang on 16/5/18.
-//  Copyright © 2016年 李洋. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -1,9 +1,5 @@
 //
 //  STPickerView.h
-//  STPickerView
-//
-//  Created by https://github.com/STShenZhaoliang/STPickerView on 16/2/17.
-//  Copyright © 2016年 shentian. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

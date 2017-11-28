@@ -1,6 +1,6 @@
 //
 //  WwHalfExchangeViewController.m
-//  prizeClaw
+//  F_Sky
 //
 
 

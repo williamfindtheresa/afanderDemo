@@ -1,9 +1,5 @@
 //
 //  WwColorUtil.h
-//  Ww
-//
-//  Created by lvbingru on 2/2/15.
-//  Copyright (c) 2015 forthblue. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

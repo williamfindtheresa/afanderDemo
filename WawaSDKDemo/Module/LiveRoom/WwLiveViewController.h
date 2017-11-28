@@ -1,6 +1,6 @@
 //
 //  WwLiveViewController.h
-//  prizeClaw
+//  F_Sky
 //
 
 #import <UIKit/UIKit.h>

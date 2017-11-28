@@ -1,9 +1,7 @@
 //
 //  WwGroundManager.m
-//  prizeClaw
+//  F_Sky
 //
-//  Created by yuyou on 2017/10/3.
-//  Copyright © 2017年 QuanMin.ShouYin. All rights reserved.
 //
 
 #import "WwGroundManager.h"

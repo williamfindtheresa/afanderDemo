@@ -1,6 +1,6 @@
 //
 //  WwWawaRecordListModel.m
-//  prizeClaw
+//  F_Sky
 //
 
 #import "WwWawaRecordListModel.h"
