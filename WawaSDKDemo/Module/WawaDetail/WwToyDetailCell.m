@@ -1,6 +1,6 @@
 //
 //  WwToyDetailCell.m
-//  WawaSDKDemo
+//  F_Sky
 //
 
 #import "WwToyDetailCell.h"

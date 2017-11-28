@@ -1,6 +1,6 @@
 //
 //  WwToyDetailHeaderView.m
-//  WawaSDKDemo
+//  F_Sky
 //
 
 #import "WwToyDetailHeaderView.h"

@@ -1,6 +1,6 @@
 //
 //  WwToyCheckView.m
-//  WawaSDKDemo
+//  F_Sky
 //
 
 #import "WwToyCheckView.h"

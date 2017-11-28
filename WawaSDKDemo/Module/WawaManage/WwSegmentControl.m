@@ -1,6 +1,6 @@
 //
 //  WwSegmentControl.m
-//  WawaSDKDemo
+//  F_Sky
 //
 //
 

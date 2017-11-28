@@ -1,6 +1,6 @@
 //
 //  WwToyDeliverFooter.m
-//  WawaSDKDemo
+//  F_Sky
 //
 //
 

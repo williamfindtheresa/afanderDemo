@@ -1,6 +1,6 @@
 //
 //  RoomListDataModel.m
-//  WawaSDKDemo
+//  F_Sky
 //
 
 #import "RoomListDataModel.h"

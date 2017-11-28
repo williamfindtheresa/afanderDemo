@@ -1,6 +1,6 @@
 //
 //  WwToyExchangeViewController.m
-//  WawaSDKDemo
+//  F_Sky
 //
 //
 

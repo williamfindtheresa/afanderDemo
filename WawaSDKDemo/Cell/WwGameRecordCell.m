@@ -1,6 +1,6 @@
 //
 //  WwGameRecordCell.m
-//  WawaSDKDemo
+//  F_Sky
 //
 
 

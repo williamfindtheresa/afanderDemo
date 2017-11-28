@@ -1,6 +1,6 @@
 //
 //  WwRecordDatailViewController.m
-//  WawaSDKDemo
+//  F_Sky
 //
 
 #import "WwRecordDatailViewController.h"

@@ -1,6 +1,6 @@
 //
 //  WwToyCheckView.h
-//  WawaSDKDemo
+//  F_Sky
 //
 //
 

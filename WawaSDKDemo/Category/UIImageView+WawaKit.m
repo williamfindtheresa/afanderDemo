@@ -1,6 +1,6 @@
 //
 //  UIImageView+WawaKit.h
-//  WawaSDKDemo
+//  F_Sky
 //
 
 #import "UIImageView+WawaKit.h"

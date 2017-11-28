@@ -18,7 +18,7 @@
 @property (nonatomic, copy) NSString *code;
 //单次抓娃娃消耗金币
 @property (nonatomic, assign) NSInteger coin;
-//单次抓娃娃消耗鱼丸
+//单次抓娃娃消耗金币
 @property (nonatomic, assign) NSInteger fishball;
 //单次抓娃娃消耗兑换劵
 @property (nonatomic, assign) NSInteger coupon;

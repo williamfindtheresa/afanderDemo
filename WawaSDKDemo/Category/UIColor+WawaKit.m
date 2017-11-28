@@ -1,6 +1,6 @@
 //
 //  UIColor+WawaKit.m
-//  WawaSDKDemo
+//  F_Sky
 //
 
 #import "UIColor+WawaKit.h"

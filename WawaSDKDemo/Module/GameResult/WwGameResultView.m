@@ -1,4 +1,4 @@
- //
+//
 //  WwGameResultView.m
 //
 
@@ -17,7 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *leftBtn;         /**< 左边按钮*/
 
-@property (weak, nonatomic) IBOutlet UIView *showBaseV;         /**< 赠送鱼丸底图*/
+@property (weak, nonatomic) IBOutlet UIView *showBaseV;         /**< 赠送金币底图*/
 
 @property (weak, nonatomic) IBOutlet UILabel *showLeftLab;
 

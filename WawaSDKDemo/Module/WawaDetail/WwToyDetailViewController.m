@@ -1,6 +1,6 @@
 //
 //  WwToyDetailViewController.m
-//  WawaSDKDemo
+//  F_Sky
 //
 
 #import "WwToyDetailViewController.h"

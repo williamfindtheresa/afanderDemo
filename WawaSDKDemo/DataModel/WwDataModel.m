@@ -1,6 +1,6 @@
 //
 //  WwDataModel.m
-//  WawaSDKDemo
+//  F_Sky
 //
 
 #import "WwDataModel.h"

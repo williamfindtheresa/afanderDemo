@@ -1,6 +1,6 @@
 //
 //  WwToyManagePanel.m
-//  WawaSDKDemo
+//  F_Sky
 //
 //
 

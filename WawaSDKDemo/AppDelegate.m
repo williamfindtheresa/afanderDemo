@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  WawaSDKDemo
+//  F_Sky
 //
 
 #import "AppDelegate.h"

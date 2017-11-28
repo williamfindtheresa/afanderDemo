@@ -1,6 +1,6 @@
 //
 //  NSString+WawaKit.m
-//  WawaSDKDemo
+//  F_Sky
 //
 
 #import "NSString+WawaKit.h"

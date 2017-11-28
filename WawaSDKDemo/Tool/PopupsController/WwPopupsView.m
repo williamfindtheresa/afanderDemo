@@ -2,7 +2,6 @@
 //  WwPopupsView.m
 //  F_Sky
 //
-//
 
 #import "WwPopupsView.h"
 

@@ -1,6 +1,6 @@
 //
 //  UILabel+WawaKit.m
-//  WawaSDKDemo
+//  F_Sky
 //
 //
 

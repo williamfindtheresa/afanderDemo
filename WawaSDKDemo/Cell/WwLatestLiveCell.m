@@ -1,6 +1,6 @@
 //
 //  WwLatestLiveCell.m
-//  WawaSDKDemo
+//  F_Sky
 //
 
 #import "WwLatestLiveCell.h"
