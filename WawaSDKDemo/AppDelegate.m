@@ -17,6 +17,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     // 普通接入方
+    
+    
+    
     [[WawaSDK WawaSDKInstance] registerApp:@"2017111515302844" appKey:@"1c8e5f1c06d09d431ec59dca8c7abe18" complete:^(BOOL success, int code, NSString * _Nullable message) {
         if (success == NO) {
             NSLog(@"游戏服务正在准备中,请稍后尝试");
