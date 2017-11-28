@@ -1,0 +1,6 @@
+framework module WawaSDK {
+  umbrella header "WawaSDK.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,120 @@
+// 客户端协议 proto3
+
+syntax = "proto3";
+
+package ATBgatewaypb;
+
+option java_package = "tv.prizeclaw.proto.gatewaypb";
+
+// 用户个人信息
+message AVTUser {
+     int32 uid = 1; // 用户ID
+     int32 gender = 2; // 性别
+     int32 verified = 3; // 验证
+     int32 exp = 4; // 经验
+     int32 level = 5; // 等级
+     int32 authed = 6; // 认证信息
+    //0正常，1系统帐号，2机器人帐号，3全民超管 4全民网警 5运营 6封号 7禁止提现 8禁止兑换 9禁止直播 10禁发私信 11冻结资金 12禁言全局 13注销私信 14实名认证(转移auth) 15禁止连麦 16绑定手机(转移auth) 17全民小黑屋
+     int32 status = 7; // 用户账号状态
+     string nickname = 8; // 昵称
+     string portrait = 9; // 头像
+}
+
+// 登录服务器请求 "Gateway.Login.Req"
+message AVTLoginReq {
+     int32 uid = 1; // 用户ID
+     string pwd = 2; // passwd //sdk使用token、appSecret
+     string devid = 3; // 设备ID
+     string app = 4; // 平台类型，如iOS/Android/PC
+     int64 rt = 5; // 当前的客户端时间
+     string vk = 6; // 校验码
+     string ver = 7; // 客户端版本
+     string channel = 8; // 应用渠道，对于Android有用，如360，百度，推广包等
+     bytes ext = 9; // 拓展数据 //目前传递appid
+
+}
+
+// 登录服务器响应 "Gateway.Login.Resp"
+message AVTLoginRsp {
+     int32 status = 1; // 登录状态，非零为异常 0 登录成功, -1 用户不存在, -2 用户被禁, -3 vk校验不通过
+     int32 uid = 2; // 如果是游客，系统分配的id
+}
+
+// 加入房间请求 "Gateway.RoomJoin.Req"
+message AVTRoomJoinReq {
+    int32 rid = 1; // 房间 id
+    bytes ext = 2; // 拓展数据
+}
+
+// Gateway.RoomJoin.Resp 拓展数据
+message AVTRoomJoinRespExt {
+    AVTLiveData liveData = 1;
+}
+
+// 加入房间响应 "Gateway.RoomJoin.Resp"
+message AVTRoomJoinRsp {
+    int32 code = 1; // 状态码，非 0 表示进入房间失败
+    int32 rid = 2; // 房间 id
+    bytes ext = 3; // 拓展数据
+}
+
+// 房间直播信息
+message AVTLiveData {
+    int32 online = 1; // 在线人数
+}
+
+// 房间更新信息通知 "Gateway.RoomUpdate.Notify" = 4100889110
+message AVTRoomUpdateNotify {
+    int32 rid = 1;
+    AVTLiveData liveData = 2;
+}
+
+// 离开房间 "Gateway.RoomLeave.Up"
+message AVTRoomLeaveReq {
+     int32 rid = 1;
+}
+
+// 聊天下行消息 "Gateway.Chat.Notify"
+message AVTChatNotify {
+     int32 rid = 1; // 房间 id
+     AVTUser user = 2;
+     int32 type = 3; // 消息类型：0 普通消息 1 收费弹幕 1001 系统通知
+     string txt = 4; // 消息文本
+     repeated AVTUser toUsers = 5; // 被@的人
+}
+
+// 聊天上行消息 "Gateway.Chat.Up"
+// NOTE: 暂不使用
+message AVTChatUp {
+     int32 type = 1; // 消息类型：0 普通消息 1 收费弹幕
+     string txt = 2;
+     repeated AVTUser toUsers = 3; // 被@的人
+}
+
+// 房间数据 "Gateway.RoomData.Notify" = 3762523492
+message AVTRoomData {
+    int32 rid = 1;
+    AVTUser  user = 2;
+    int32 state = 3; //-100:机器回收, -1:机器下架, 0:机器故障,  1:补货中，2: 空闲, 3:开始游戏, 4: 移动中, 5:下抓(等待结果), 6: 等待重新上机
+    string streamPlayer = 4; //增加了flag 字段
+}
+
+// 抓取结果通知 "Gateway.ClawResult.Notify" = 4092477418
+message AVTClawResult {
+    int32 rid = 1;
+    AVTUser user = 2;//用户
+    int32 status = 3;//1:未抓中; 2:抓中;
+}
+
+// 全局消息类型
+enum AVTGlobalNotifyType {
+    TYPE_NONE = 0;
+    CLAW_SUCCESS = 1; // 抓取成功全局广播, message 为提示
+}
+
+// 全局消息 "Gateway.Global.Notify" = 2658903529
+message AVTGlobalNotify {
+    int32 type = 1; // 消息内容
+    string message = 2; // 文本消息内容
+}
+
